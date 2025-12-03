@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benzin İstasyonu</title>
+</head>
+<body>
+<script>
+    let dizel = 24.53 , benzin =33.3, lpg = 45.33;
+    const yenisatir = "\n" /*alt satıra geçmek için ilk burda tanımlıyorum*/ 
+    /*string birşey yazacağın zaman "çift tınak içinde yaz" number olarak yazıcağın zaman sade rakam yaz*/ 
+    const YakitMetni = "1-Dizel" + yenisatir
+    +"2-Benzin" + yenisatir
+    +"3-LPG" + yenisatir
+    +"Yakıt Türünüzü Seçiniz";
+    let YakitTipi = prompt(YakitMetni);
+  if (YakitTipi=="1" || YakitTipi=="2" || YakitTipi==3){
+    let YalitLitresi = Number(prompt("Yakıt Litresini Giriniz"));/*matamatiksel işlem yapıcaksan başına Number yaz*/ 
+    let bakiye = Number(prompt("Bakiyenizi Giriniz"));
+    if(YakitTipi=="1"){ /*YakitTipi yazısı string olduğu için karşısınada "string şeklinde yaz"*/
+        //Dizel
+        let odenecekTutar = dizel*YalitLitresi;
+        if(odenecekTutar<bakiye){
+            //bakiye yeterli 
+bakiye = bakiye-odenecekTutar;
+alert("Yakıt Alma İşlemi Başarılı"+yenisatir
++"KalanBakiye : " + bakiye
+);
+        }   
+        else{
+  //bakiye yeterli değil
+  alert("bakiye yeterli değildir!"+yenisatir
+    +"Ödenecek Tutar : "+odenecekTutar+yenisatir
+    +"Bakiye : " +bakiye+yenisatir
+  +"Eksik Tutar : "+(odenecekTutar-bakiye));
+
+        }
+         }
+
+         if(YakitTipi=="2"){
+        //Benzin
+        let odenecekTutar = dizel*YalitLitresi;
+        if(odenecekTutar<bakiye){
+            //bakiye yeterli 
+bakiye = bakiye-odenecekTutar;
+alert("Yakıt Alma İşlemi Başarılı"+yenisatir
++"KalanBakiye : " + bakiye
+);
+        }   
+        else{
+  //bakiye yeterli değil
+  alert("bakiye yeterli değildir!"+yenisatir
+    +"Ödenecek Tutar : "+odenecekTutar+yenisatir
+    +"Bakiye : " +bakiye+yenisatir
+  +"Eksik Tutar : "+(odenecekTutar-bakiye));
+
+        }
+         }
+
+         if(YakitTipi=="3"){
+        //LPG
+        let odenecekTutar = LPG*YalitLitresi;
+        if(odenecekTutar<bakiye){
+            //bakiye yeterli 
+bakiye = bakiye-odenecekTutar;
+alert("Yakıt Alma İşlemi Başarılı"+yenisatir
++"KalanBakiye : " + bakiye
+);
+        }   
+        else{
+  //bakiye yeterli değil
+  alert("bakiye yeterli değildir!"+yenisatir
+    +"Ödenecek Tutar : "+odenecekTutar+yenisatir
+    +"Bakiye : " +bakiye+yenisatir
+  +"Eksik Tutar : "+(odenecekTutar-bakiye));
+
+        }
+         }
+         
+  }
+  else{
+    alert("Yakı Tipini Seçeniz !!!")
+  }
+</script>
+</body>
+</html>
